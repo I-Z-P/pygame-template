@@ -10,10 +10,14 @@
 * [maze](https://github.com/I-Z-P/pygame-template/blob/master/maze)
     - Render map from txt file and check collision with tiles.
 
+* [platform](https://github.com/I-Z-P/pygame-template/blob/master/platform)
+    - Render map from txt file and check collision with tiles.
+    - Gravity and jumping model
+
 
 ## To do
 * platform game template (in progress)
-    - features gravity and jumping model like super mario
+    - fix gravity issue in platform template
 
 ## Author
 [D1N3SHh](https://github.com/D1N3SHh)
