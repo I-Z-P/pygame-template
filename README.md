@@ -17,7 +17,16 @@
 
 ## To do
 * platform game template (in progress)
-    - fix gravity issue in platform template
+    - make camera horizontal movement
+
+* vertical jumper template
+    - Gravity and smoth jumping model
+    - Vertical map
+
+* flappy jumper
+    - multijump in place like flappy bird
+    - moving, horizontal map 
+
 
 ## Author
 [D1N3SHh](https://github.com/D1N3SHh)

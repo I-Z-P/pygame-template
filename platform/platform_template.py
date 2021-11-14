@@ -10,8 +10,9 @@ from pygame.math import Vector2
 #####SETTINGS#####
 HEIGHT = 1080
 WIDTH = 1920
+TICKRATE = 60
 BLOCK_SIZE = 60
-GRAVITY = 12
+GRAVITY = 16
 ##################
 
 
@@ -61,6 +62,7 @@ class Player():
 
     def move(self):
         self.shift = Vector2(0, GRAVITY)
+        self.position.y = int(self.position.y)
 
         # left / right section
         if self.go_left:
@@ -78,8 +80,9 @@ class Player():
         self.collisions = test_collisions(pygame.Rect(self.position.x, self.position.y + GRAVITY, BLOCK_SIZE, BLOCK_SIZE), level.blocks)
         if self.collisions['bottom']: 
             self.shift -= Vector2(0, GRAVITY)
-        print(self.position.y + self.shift.y)
-
+            if self.position.y % BLOCK_SIZE > 0:
+                self.position.y += BLOCK_SIZE - (self.position.y % BLOCK_SIZE)
+            
         # jump section
         if self.go_up:
             self.go_up = False
@@ -90,7 +93,7 @@ class Player():
         if self.jump.y > GRAVITY or self.collisions['top']:
             self.jump = Vector2(0, 0)
         else: 
-            self.jump *= 0.8
+            self.jump *= 0.9
             self.shift += self.jump
             
         # new position
@@ -134,14 +137,13 @@ def test_collisions(object, rects):
                 collisions['top'] = True
             if object.y <= rect.y:
                 collisions['bottom'] = True
-    # print(collisions)
     return(collisions)
 
-    
+
 def main_loop():
     clock = pygame.time.Clock()
     while run:
-        clock.tick(60)
+        clock.tick(TICKRATE)
         handle_events(player)
         player.move()
         render(screen, player, level)
