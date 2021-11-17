@@ -13,19 +13,22 @@
 * [platform](https://github.com/I-Z-P/pygame-template/blob/master/platform)
     - Render map from txt file and check collision with tiles.
     - Gravity and jumping model
+    - Camera folows player
+
+* [endless runner](https://github.com/I-Z-P/pygame-template/blob/master/endless_runner)
+    - Camera auto scrolling
+    - Infinity map
+    - Gravity and jumping model
 
 
 ## To do
-* platform game template (in progress)
-    - make camera horizontal movement
-
 * vertical jumper template
     - Gravity and smoth jumping model
     - Vertical map
 
 * flappy jumper
     - multijump in place like flappy bird
-    - moving, horizontal map 
+    - moving, horizontal map
 
 
 ## Author
