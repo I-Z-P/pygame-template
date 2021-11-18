@@ -20,6 +20,9 @@
     - Infinity map
     - Gravity and jumping model
 
+* [endless runner](https://github.com/I-Z-P/pygame-template/blob/master/menu)
+    - support only start button
+
 
 ## To do
 * vertical jumper template
